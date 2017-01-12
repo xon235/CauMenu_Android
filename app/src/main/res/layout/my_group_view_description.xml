@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:showDividers="middle"
+    android:divider="?android:listDivider"
+    android:paddingRight="16dp"
+    android:paddingLeft="16dp"
+    android:background="@color/timelineBackgroundColor">
+    <TextView
+        android:id="@+id/descriptionTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dummy_text_multiline"
+        android:gravity="center_vertical"
+        android:maxLines="100"
+        android:padding="16dp"
+        android:inputType="textMultiLine" />
+    <TextView
+        android:id="@+id/priceTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dummy_text_short"
+        android:gravity="right"
+        android:padding="16dp" />
+</LinearLayout>

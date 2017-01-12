@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">중앙대 학식</string>
+    <string name="title_activity_main">" 학식"</string>
+    <string name="title_activity_building_page">Building Page Activity</string>
+    <string name="title_activity_news">새소식</string>
+    <string name="refresh">새로고침</string>
+    <string name="unable_to_connect">연결할 수 없음 :-(</string>
+    <string name="all">전체</string>
+    <string name="my_news_url">http://52.78.125.129:3000</string>
+    <string name="yi_su_ho_cau_cse_14">Yi Su Ho\nCAU CSE 14</string>
+    <string name="graphic_image_of_suho">수호의 그림</string>
+    <string name="about_text">이 앱은 광고가 없습니다. 하지만 1년에 몇 번 저의 새로운 게임이 나올 때 마다 새소식 창을 열어 알려드립니다. 제 앱을 이용해주셔서 감사합니다.</string>
+    <string name="instagram_icon">Instagram icon</string>
+    <string name="check_out_my_instagram">randoman1212\n인스타그램에서 제 소식을 확인하세요!</string>
+    <string name="news">새소식</string>
+    <string name="dummy_text_short">Dummy Text</string>
+    <string name="dummy_text_multiline">Dummy Text\nDummy Text\nDummy Text\nDummy Text\nDummy Text\nDummy Text\n</string>
+</resources>
