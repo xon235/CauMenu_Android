@@ -25,4 +25,10 @@
     <color name="colorfilm">#55000000</color>
 
     <color name="teal">#009688</color>
+    
+    <color name="breakfast">#fffacc</color>
+    <color name="launch">#ffebba</color>
+    <color name="dinner">#a5d8d8</color>
+    <color name="speacial">#fddd62</color>
+    <color name="snack">#d6ffd9</color>
 </resources>

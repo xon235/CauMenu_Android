@@ -104,7 +104,25 @@ public class MenuXmlParser {
                 parser.next();
             }
         }
-        int weight = (MyDataManager.BUILDING_CODE_MAP.get(mBuildingCode).getWeight() * 1000) + mMenuArrayList.size();
+        int weight = (MyDataManager.BUILDING_CODE_MAP.get(mBuildingCode).getWeight() * 10000);
+        if(menuName.contains("특식")) {
+            weight += 400;
+        } else {
+            if(menuName.contains("조식")){
+                weight += 100;
+            } else if(menuName.contains("중식")) {
+                weight += 200;
+            } else if(menuName.contains("석식")) {
+                weight += 300;
+            } else if(menuName.contains("간식")) {
+                weight += 500;
+            } else {
+                weight += 600;
+            }
+        }
+
+        weight += + mMenuArrayList.size();
+
         return new Menu(menuName, menuDescription, menuPrice, menuBuilding, menuSH, menuSM, menuEH, menuEM, weight);
     }
 }

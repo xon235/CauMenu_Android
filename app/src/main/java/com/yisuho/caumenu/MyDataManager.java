@@ -56,7 +56,7 @@ public class MyDataManager {
 //        sBuildingCodeMap.put("03", new Building("03", "참마루(205)", "참마루", "205관 B1층", R.drawable.image_blue_mir, 2));
         sBuildingCodeMap.put("06", new Building("06", "학생식당(303)", "학생식당", "303관 B1층", R.drawable.s303, 3));
         sBuildingCodeMap.put("07", new Building("07", "교직원식당(303)", "교직원식당", "303관 B1층", R.drawable.s303, 4));
-        sBuildingCodeMap.put("08", new Building("08", "샐활관식당(308)", "생활관식당(308)", "블루미르 308관", R.drawable.s308, 5));
+        sBuildingCodeMap.put("08", new Building("08", "생활관식당(308)", "생활관식당(308)", "블루미르 308관", R.drawable.s308, 5));
         sBuildingCodeMap.put("12", new Building("12", "생활관식당(309)", "생활관식당(309)", "블루미르 309관", R.drawable.s309, 6));
         sBuildingCodeMap.put("13", new Building("13", "참슬기식당(310)", "참슬기 식당", "310관 B4층", R.drawable.s310, 7));
         sBuildingCodeMap.put("09", new Building("09", "안성학생식당", "안성학생식당", "", R.drawable.as, 8));
@@ -87,6 +87,7 @@ public class MyDataManager {
 
         String lastMenuUpdate = PreferenceManager.getDefaultSharedPreferences(context).getString(KEY_PREF_LAST_MENU_UPDATE, "0");
         final String today = new SimpleDateFormat("yyyyMMdd").format(new Date());
+
 
         if (lastMenuUpdate.equals(today)) {
             for (String buildingCode : BUILDING_CODE_MAP.keySet()) {

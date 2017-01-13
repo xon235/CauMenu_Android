@@ -24,7 +24,7 @@ public class CustomBodyStringRequest extends StringRequest {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd");
         String today = simpleDateFormat.format(date);
         this.mRequestBody = "<map><calvalue value='0'/><today value='" + today +"'/><store value='" + buildingCode +"'/></map>";
-//        this.mRequestBody = "<map><calvalue value='0'/><today value='" + 20160829 +"'/><store value='" + buildingCode +"'/></map>";
+//        this.mRequestBody = "<map><calvalue value='0'/><today value='" + 20170113 +"'/><store value='" + buildingCode +"'/></map>";
     }
 
     @Override

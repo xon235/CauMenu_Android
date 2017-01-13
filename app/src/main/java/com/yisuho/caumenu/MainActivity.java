@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setIcon(R.drawable.ic_cau);
+//        getSupportActionBar().setIcon(R.drawable.ic_cau);
 
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 

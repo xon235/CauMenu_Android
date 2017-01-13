@@ -78,7 +78,24 @@ public class MyExpandAdapter extends BaseExpandableListAdapter {
             v = mInflater.inflate(R.layout.my_group_view_name, viewGroup, false);
 
             TextView tv = (TextView) v.findViewById(R.id.Tv);
-            tv.setText(((Menu) mGroupArrayList.get(i)).getName());
+            String name = ((Menu) mGroupArrayList.get(i)).getName();
+
+            if(name.contains("조식")){
+                v.setBackgroundResource(R.color.breakfast);
+            } else if(name.contains("중식")) {
+                v.setBackgroundResource(R.color.launch);
+            } else if(name.contains("석식")) {
+                v.setBackgroundResource(R.color.dinner);
+            }
+
+            if(name.contains("특식")) {
+                v.setBackgroundResource(R.color.speacial);
+            }
+
+            if(name.contains("간식")) {
+                v.setBackgroundResource(R.color.snack);
+            }
+           tv.setText(name);
             return v;
         }
     }
