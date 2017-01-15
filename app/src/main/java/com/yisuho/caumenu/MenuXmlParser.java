@@ -65,6 +65,7 @@ public class MenuXmlParser {
         int menuSM = 0;
         int menuEH = 0;
         int menuEM = 0;
+        boolean returnNull = false;
 
         while (parser.next() != XmlPullParser.END_TAG) {
             if (parser.getEventType() != XmlPullParser.START_TAG) {
@@ -87,9 +88,10 @@ public class MenuXmlParser {
                     menuEH = ((eH * 60) + eM - 1) / 60;
                     menuEM = ((eH * 60) + eM - 1) % 60;
                 } catch (Exception e){
-                    return null;
+                    returnNull = true;
+                } finally {
+                    parser.next();
                 }
-                parser.next();
             } else if (name.equals("amt")) {
                 menuPrice = parser.getAttributeValue(sNamespace, "value");
                 parser.next();
@@ -97,7 +99,7 @@ public class MenuXmlParser {
                 menuDescription = parser.getAttributeValue(sNamespace, "value")
                         .replace("<br>", "\n");
                 if(menuDescription.contains("운영없음")){
-                    return null;
+                    returnNull = true;
                 }
                 parser.next();
             }else {
@@ -122,8 +124,11 @@ public class MenuXmlParser {
         }
 
         weight += + mMenuArrayList.size();
-
-        return new Menu(menuName, menuDescription, menuPrice, menuBuilding, menuSH, menuSM, menuEH, menuEM, weight);
+        if(returnNull){
+            return  null;
+        } else {
+            return new Menu(menuName, menuDescription, menuPrice, menuBuilding, menuSH, menuSM, menuEH, menuEM, weight);
+        }
     }
 }
 
